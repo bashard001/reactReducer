@@ -1,18 +1,23 @@
 import React, {
-    useState,
+    useState, useContext
 } from 'react';
 
 import uuid from 'uuid/v4';
+
+import DispatchContext from '../context/dispatchContext';
+
 
 // Hint use Dispatch Context
 // useContext
 
 export const AddTodo = () => {
-
+const dispatch= useContext(DispatchContext)
     const [task, setTask] = useState('');
     const handleSubmit = event => {
+        event.preventDefault()
         const id = uuid();
-        // { type: 'ADD_TODO', task, id: uuid() }
+        // 
+        dispatch({ type: 'ADD_TODO', task: task, id: uuid() })
         // Use Above Action
         setTask('');
         console.log(id);        

@@ -17,15 +17,22 @@ export const TodoReducer = (state, action) => {
                     return todo;
                 }
             });
+
         case 'ADD_TODO':
-            // Schema
-            /*{
-                task: string,
-                id: ID,
-                complete: bool,
-            }*/
-            return state;
+
+
+        return [...state, addTask(action.task, action.id)]
+        
+        
         default:
             return state;
     }
 };
+
+function addTask(task, id){
+    return{
+        task: task,
+        id: id,
+        complete: false
+    }
+}

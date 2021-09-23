@@ -3,12 +3,15 @@ import React, {
 } from 'react';
 import uuid from 'uuid/v4';
 
-import { AddTodo, Filter, TodoList } from './components';
+import { AddTodo, TodoList } from './components';
+import { Filter } from "./components/filter"
 
 import DispatchContext from './context/dispatchContext';
 import useCombinedReducers from 'use-combined-reducers';
 
 import { TodoReducer, FilterReducer } from './reducer';
+
+
 const initialTodos = [
   {
     id: uuid(),
