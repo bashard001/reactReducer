@@ -7,8 +7,6 @@ import uuid from 'uuid/v4';
 import DispatchContext from '../context/dispatchContext';
 
 
-// Hint use Dispatch Context
-// useContext
 
 export const AddTodo = () => {
 const dispatch= useContext(DispatchContext)
