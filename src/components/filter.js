@@ -3,6 +3,8 @@ import React, {
 } from 'react';
 
 import DispatchContext from '../context/dispatchContext';
+
+
 export const Filter = () => {
     const dispatch = useContext(DispatchContext);
 

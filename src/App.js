@@ -3,8 +3,7 @@ import React, {
 } from 'react';
 import uuid from 'uuid/v4';
 
-import { AddTodo, TodoList } from './components';
-import { Filter } from "./components/filter"
+import { AddTodo,Filter, TodoList } from './components';
 
 import DispatchContext from './context/dispatchContext';
 import useCombinedReducers from 'use-combined-reducers';
